@@ -1,0 +1,12 @@
+{
+    "code": 0,
+    "message": "",
+    "result": {
+        "accountExisted": 1,
+        "crCode": "US",
+        "ctCode": "CNA",
+        "nodeName": "us",
+        "uacNodeUrl": "https://uac-us.ajcloud.net/api"
+    },
+    "status": "ok"
+}

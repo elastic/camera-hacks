@@ -1,0 +1,17 @@
+{
+    "data": {
+        "accessToken": "155characterAccessTokenString",
+        "agentName": "win95vm",
+        "agentToken": "{abc12345-6789-0def-9abc-d3adb33f0123}",
+        "appVendorCode": "WVC",
+        "origin": "PC",
+        "osName": "windows",
+        "refreshToken": "refreshToken"
+    },
+    "meta": {
+        "appName": "wansview",
+        "appVendorCode": "WVC",
+        "locale": "en",
+        "localtz": -240
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "data": {
+        "agentName": "win95vm",
+        "appVendorCode": "WVC",
+        "devices": [
+            {
+                "deviceType": 1,
+                "did": "WVCD0123456789AB",
+                "isShare": false,
+                "scopes": [
+                ]
+            }
+        ],
+        "origin": "PC",
+        "osName": "windows"
+    },
+    "meta": {
+        "appName": "wansview",
+        "appVendorCode": "WVC",
+        "locale": "en",
+        "localtz": -240
+    }
+}

@@ -1,0 +1,705 @@
+{
+    "code": 0,
+    "message": "",
+    "result": {
+        "infos": [
+            {
+                "deviceId": "WVCD0123456789AB",
+                "deviceType": 1,
+                "did": "WVCD0123456789AB",
+                "dtype": 1,
+                "info": {
+                    "alarmRekConfig": {
+                        "__persistent": 0,
+                        "pnmFall": 1,
+                        "pnmHumanoid": 1,
+                        "pnmO1": 0,
+                        "pnmPackage": 1,
+                        "pnmPet": 1,
+                        "pnmVehicle": 1,
+                        "rekFall": 1,
+                        "rekHumanoid": 1,
+                        "rekPackage": 1,
+                        "rekPet": 1,
+                        "rekVehicle": 1
+                    },
+                    "audioConfig": {
+                        "micEnable": 1,
+                        "micVolume": 70,
+                        "speakerVolume": 70
+                    },
+                    "autoHibernateConfig": {
+                        "enable": 0,
+                        "timePolicies": [
+                            {
+                                "enable": 0,
+                                "endTime": "235959",
+                                "no": 1,
+                                "startTime": "000000",
+                                "weekDays": [
+                                    1,
+                                    2,
+                                    3,
+                                    4,
+                                    5,
+                                    6,
+                                    7
+                                ]
+                            },
+                            {
+                                "enable": 0,
+                                "endTime": "",
+                                "no": 2,
+                                "startTime": "",
+                                "weekDays": [
+                                ]
+                            },
+                            {
+                                "enable": 0,
+                                "endTime": "",
+                                "no": 3,
+                                "startTime": "",
+                                "weekDays": [
+                                ]
+                            }
+                        ]
+                    },
+                    "base": {
+                        "accessKey": "43characterAccessPubKey",
+                        "aclid": "d41d8cd98f00b204e9800998ecf8427e",
+                        "aliasName": "WVCD0123456789AB",
+                        "appVendorCode": "WVC",
+                        "channelId": "WVCD0123456789AB",
+                        "city": "",
+                        "connReadyTime": "1713222311194",
+                        "continent": "CNA",
+                        "country": "US",
+                        "deviceId": "WVCD0123456789AB",
+                        "deviceMode": "NAV",
+                        "deviceType": "1",
+                        "dispatchUrl": "https://172.16.20.199:907/api/v1/dispatch",
+                        "endpoint": "172.16.20.199:907",
+                        "freqValue": 50,
+                        "fwVersion": "01.10105.10.16",
+                        "lastCamSnapshotResReqStorMode": "oss",
+                        "lastCamSnapshotResReqTime": "2024-04-15T23:05:16.737Z",
+                        "lastPingTime": 1713235607909,
+                        "masterUid": "us:abc12345-6789-0def-9abc-d3adb33f0123",
+                        "newFwVersion": "01.10105.10.47",
+                        "nightMode": 1,
+                        "onlineModified": 1713222320094,
+                        "onlineModifier": "stream-config",
+                        "onlineStatus": 2,
+                        "orientationValue": 0,
+                        "prodName": "Q6",
+                        "remoteAddr": "1.2.3.4",
+                        "snapshotTs": "0",
+                        "snapshotUrl": "",
+                        "snapshotUrl2": "",
+                        "subdivision1": "AL",
+                        "tunnelTopic": "cam-tunnel.192-168-20-1_123.reply",
+                        "tzManualAdjust": "1",
+                        "vendorCode": "WVC",
+                        "websocketFD": "webSocketFd",
+                        "whiteBalance": 1,
+                        "wssPingInterval": "120",
+                        "zone": "US-z-e"
+                    },
+                    "capability": {
+                        "alarmMediaTypes": "image,video",
+                        "appDefaultMute": "0",
+                        "autoTrack": "0",
+                        "battery": "0",
+                        "cloudStorageModes": "qiniu,oss,b2",
+                        "cloudStorFullDay": "1",
+                        "cognitiveTypes": "",
+                        "detectEnhance": "1",
+                        "detectionAreaShowHint": "0",
+                        "diagnose": "1",
+                        "dualLens": "0",
+                        "dualLensZoomVerge": "0.0",
+                        "duplexVoice": "1",
+                        "encryptMode": "0",
+                        "feeding": "0",
+                        "feedingTimingLimit": "5",
+                        "floodlight": "0",
+                        "floodlightBrightCtrl": "0",
+                        "floodlightDual": "0",
+                        "floodlightNightMode": "0",
+                        "floodlightTiming": "1",
+                        "genAlarmThumb": "1",
+                        "hibernate": "1",
+                        "indicatorLightCtl": "1",
+                        "insideCognitive": "0",
+                        "insideCognitiveTypes": "",
+                        "localRtsp": "1",
+                        "localStorageTypes": "tf",
+                        "localStorFullDay": "0",
+                        "localStorRmt": "1",
+                        "lowPowerStorage": "0",
+                        "lpRetriggerIntervalType": "0",
+                        "lvs1OpticalZoom": "0",
+                        "lvs1Ptz": "0",
+                        "lvs1Qualities": "1:HD,5:FHD",
+                        "lvs1ZoomVerge": "",
+                        "lvsType": "",
+                        "manualNightVersion": "1",
+                        "mic": "1",
+                        "micDefaultVolume": "70",
+                        "micVolumeCtrl": "0",
+                        "networkConfig": "qr",
+                        "newtz": "1",
+                        "nightVision2": "0",
+                        "nightVisionColorCtrl": "1",
+                        "oneTouchCall": "0",
+                        "onvif": "1",
+                        "opticalZoom": "0",
+                        "osdCtrl": "1",
+                        "pelco": "0",
+                        "pirDetect": "0",
+                        "privateBase": "1",
+                        "privateRegion": "0",
+                        "privateTimedHibernate": "0",
+                        "privLiveStream": "1",
+                        "ptz": "1",
+                        "qualities": "1:SD,6:2K",
+                        "rtmp": "0",
+                        "rtmpStopBySession": "1",
+                        "showChargingCapacity": "0",
+                        "sims": "0",
+                        "simsCtrl": "0",
+                        "siren": "1",
+                        "sirenSoundsCtrl": "0",
+                        "snipInterpolationHint": "0",
+                        "soundDetect": "0",
+                        "speaker": "1",
+                        "staticLocalIp": "1",
+                        "tfPlaybackType": "hls",
+                        "variFocus": "0",
+                        "voiceDetect": "0",
+                        "whiteLightCtl": "0",
+                        "wlanOnlineSet": "1",
+                        "wlanOnlineSwitch": "0"
+                    },
+                    "cloudStorConfig": {
+                        "detectionConfigName": "share",
+                        "ecoRecordDurationLimit": 20,
+                        "enable": 0,
+                        "expireAt": "-0",
+                        "policies": [
+                            {
+                                "enable": 0,
+                                "endTime": "235959",
+                                "no": 1,
+                                "startTime": "000000",
+                                "weekDays": [
+                                    1,
+                                    2,
+                                    3,
+                                    4,
+                                    5,
+                                    6,
+                                    7
+                                ]
+                            },
+                            {
+                                "enable": 0,
+                                "endTime": "",
+                                "no": 2,
+                                "startTime": "",
+                                "weekDays": [
+                                ]
+                            },
+                            {
+                                "enable": 0,
+                                "endTime": "",
+                                "no": 3,
+                                "startTime": "",
+                                "weekDays": [
+                                ]
+                            }
+                        ],
+                        "quality": 4,
+                        "triggerMode": 0
+                    },
+                    "cloudStorPlan": {
+                        "alarmVideo": "false",
+                        "expireViewAt": 0,
+                        "keepDays": "",
+                        "lastStoreTs": 0,
+                        "level": 0,
+                        "orderId": "",
+                        "sku": "",
+                        "validTsEnd": 0,
+                        "validTsStart": 0
+                    },
+                    "detectionsConfig": {
+                        "share": {
+                            "areas": [
+                                "0,0,10000,10000"
+                            ],
+                            "areaShowStyle": 0,
+                            "fullViewport": 1,
+                            "name": "share",
+                            "susceptiveness": "3"
+                        }
+                    },
+                    "floodlightConfig": {
+                        "autoPolicy": {
+                            "enable": 1,
+                            "lightingDur": 15,
+                            "triggersOn": [
+                                "action-detect"
+                            ]
+                        },
+                        "brightness": 100,
+                        "timePolicies": [
+                            {
+                                "enable": 0,
+                                "endTime": "",
+                                "no": 1,
+                                "startTime": "",
+                                "toggle": "on",
+                                "weekDays": [
+                                ]
+                            },
+                            {
+                                "enable": 0,
+                                "endTime": "",
+                                "no": 2,
+                                "startTime": "",
+                                "toggle": "on",
+                                "weekDays": [
+                                ]
+                            }
+                        ],
+                        "toggle": "off"
+                    },
+                    "hibernateConfig": {
+                        "duration": 0,
+                        "enable": 0
+                    },
+                    "indicatorLightConfig": {
+                        "enable": 1
+                    },
+                    "insideCognitiveConfig": {
+                        "fall": {
+                            "enable": 1
+                        },
+                        "humanoid": {
+                            "enable": 1
+                        },
+                        "package": {
+                            "enable": 1
+                        },
+                        "pet": {
+                            "enable": 1
+                        },
+                        "vehicle": {
+                            "enable": 1
+                        }
+                    },
+                    "lightingFreqConfig": {
+                        "freqValue": "60"
+                    },
+                    "livePolicy": {
+                        "p2p": "1",
+                        "relay": "1",
+                        "rtmp": "1",
+                        "upnp": "0"
+                    },
+                    "localAccountConfig": {
+                        "password": "password",
+                        "username": "username"
+                    },
+                    "localStorConfig": {
+                        "detectionConfigName": "share",
+                        "ecoRecordDurationLimit": 20,
+                        "enable": 1,
+                        "nasPath": "",
+                        "playUrlRoot": "http://192.168.0.187/api",
+                        "policies": [
+                            {
+                                "enable": 1,
+                                "endTime": "235959",
+                                "format": 1,
+                                "no": 1,
+                                "startTime": "000000",
+                                "weekDays": [
+                                    1,
+                                    2,
+                                    3,
+                                    4,
+                                    5,
+                                    6,
+                                    7
+                                ]
+                            },
+                            {
+                                "enable": 0,
+                                "endTime": "",
+                                "format": 1,
+                                "no": 2,
+                                "startTime": "",
+                                "weekDays": [
+                                ]
+                            },
+                            {
+                                "enable": 0,
+                                "endTime": "",
+                                "format": 1,
+                                "no": 3,
+                                "startTime": "",
+                                "weekDays": [
+                                ]
+                            }
+                        ],
+                        "quality": 5,
+                        "storageType": 1,
+                        "triggerMode": 0,
+                        "writeMode": 1
+                    },
+                    "moveMonitorConfig": {
+                        "detectionConfigName": "share",
+                        "enable": 0,
+                        "genAlarmThumb": 0,
+                        "policies": [
+                            {
+                                "enable": 0,
+                                "endTime": "235959",
+                                "no": 1,
+                                "respondMode": 1,
+                                "startTime": "000000",
+                                "weekDays": [
+                                    1,
+                                    2,
+                                    3,
+                                    4,
+                                    5,
+                                    6,
+                                    7
+                                ]
+                            },
+                            {
+                                "enable": 0,
+                                "endTime": "",
+                                "no": 2,
+                                "respondMode": 1,
+                                "startTime": "",
+                                "weekDays": [
+                                ]
+                            },
+                            {
+                                "enable": 0,
+                                "endTime": "",
+                                "no": 3,
+                                "respondMode": 1,
+                                "startTime": "",
+                                "weekDays": [
+                                ]
+                            }
+                        ],
+                        "respondMediaType": 1,
+                        "respondMode": 0,
+                        "susceptiveness": 3
+                    },
+                    "networkConfig": {
+                        "cellularRssi": "0",
+                        "cellularSignal": "-1",
+                        "dnsServers": "192.168.0.1,8.8.8.8",
+                        "ethMac": "",
+                        "gatewayIp": "192.168.0.1",
+                        "ipConfigMode": "auto",
+                        "localDirectProbeUrl": "http://192.168.0.187:80/api/v1/lan-probe",
+                        "localIp": "192.168.0.187",
+                        "localIpMask": "255.255.255.0",
+                        "netLinkType": "WIFI",
+                        "ssid": "WhereIsMySSID",
+                        "uplinkBw": "-1",
+                        "wanIp": "",
+                        "wifiRssi": "-35",
+                        "wifiSignal": "90",
+                        "wlanMac": "AB:CD:EF:01:23:45"
+                    },
+                    "newFwversion": {
+                        "byteSize": "0",
+                        "downloadUrl": "http://fw.ajcloud.net/01.10105/9Bw4Yu5AC5yABQzHSZ1RPJ_ota_firmware_01.10105.10.47.pkg",
+                        "md5sum": "",
+                        "priority": "4",
+                        "releaseNoteUrl": "http://fw.ajcloud.net/01.10105/vDTbujoUArfsJXoDWNt4AD_01.10105.10.47.md",
+                        "version": "01.10105.10.47"
+                    },
+                    "nightVision2Config": {
+                        "ledMode": 0,
+                        "nightMode": 0
+                    },
+                    "nightVisionConfig": {
+                        "nightMode": 1
+                    },
+                    "onvifConfig": {
+                        "enable": "0",
+                        "port": "8899",
+                        "verify": "1"
+                    },
+                    "osdConfig": {
+                        "datetimeShow": 1,
+                        "datetimeStyle": "yyyy-MM-dd HH:mm:ss",
+                        "logoShow": 1,
+                        "logoUrl": "default"
+                    },
+                    "pelcoConfig": {
+                        "baudRate": 9600,
+                        "extras": {
+                        },
+                        "protocol": "auto"
+                    },
+                    "pictureConfig": {
+                        "brightness": 128,
+                        "contrast": 128,
+                        "saturation": 128,
+                        "sharpness": 128
+                    },
+                    "privateRegionConfig": {
+                        "areas": [
+                        ],
+                        "coverMode": "default",
+                        "enable": 0,
+                        "name": "default"
+                    },
+                    "protectionPlan": {
+                        "alarmRek": "false",
+                        "alarmVideo": "false",
+                        "buyerId": "",
+                        "cloudStorFullDay": "false",
+                        "devShareCount": "3",
+                        "expireViewAt": "0",
+                        "genAlarmThumb": "false",
+                        "keepDays": "",
+                        "lastStoreTs": "0",
+                        "level": "0",
+                        "limitDevices": "0",
+                        "localStorFullDay": "false",
+                        "lv0AlarmRek": "false",
+                        "lv0CloudStorFullDay": "false",
+                        "lv0DevShareCount": "3",
+                        "lv0GenAlarmThumb": "false",
+                        "lv0LocalStorFullDay": "false",
+                        "orderId": "<freeOrderId>",
+                        "sku": "",
+                        "validTsEnd": "-1",
+                        "validTsStart": "-1"
+                    },
+                    "rtspConfig": {
+                        "enable": 1,
+                        "port": 554,
+                        "verify": 1
+                    },
+                    "simsConfig": {
+                        "carrier1": "",
+                        "carrier2": "",
+                        "enable1": 0,
+                        "enable2": 0,
+                        "iccid1": "",
+                        "iccid2": "",
+                        "networkMode1": "",
+                        "networkMode2": "",
+                        "status1": 0,
+                        "status2": 0,
+                        "supplier1": "",
+                        "supplier2": "",
+                        "tag1": "Builtin",
+                        "tag2": "External",
+                        "webMgtUrl1": "",
+                        "webMgtUrl2": ""
+                    },
+                    "sirenConfig": {
+                        "autoPolicy": {
+                            "enable": 0,
+                            "triggersOn": [
+                                "action-detect"
+                            ]
+                        },
+                        "toggle": "off"
+                    },
+                    "sirenSoundsConfig": {
+                        "builtins": [
+                            {
+                                "autype": "g711",
+                                "lang": "en",
+                                "memo": "default_memo",
+                                "name": "default",
+                                "rects": 0,
+                                "url": "https://adhoc.ajcloud.net/siren-sounds/en/00.warning_default.g711"
+                            },
+                            {
+                                "autype": "g711",
+                                "lang": "en",
+                                "memo": "builtin01_memo",
+                                "name": "builtin01",
+                                "rects": 0,
+                                "url": "https://adhoc.ajcloud.net/siren-sounds/en/01.warning_area.g711"
+                            },
+                            {
+                                "autype": "g711",
+                                "lang": "en",
+                                "memo": "builtin02_memo",
+                                "name": "builtin02",
+                                "rects": 0,
+                                "url": "https://adhoc.ajcloud.net/siren-sounds/en/02.danger_area.g711"
+                            },
+                            {
+                                "autype": "g711",
+                                "lang": "en",
+                                "memo": "builtin03_memo",
+                                "name": "builtin03",
+                                "rects": 0,
+                                "url": "https://adhoc.ajcloud.net/siren-sounds/en/03.private_area.g711"
+                            },
+                            {
+                                "autype": "g711",
+                                "lang": "en",
+                                "memo": "builtin04_memo",
+                                "name": "builtin04",
+                                "rects": 0,
+                                "url": "https://adhoc.ajcloud.net/siren-sounds/en/04.welcome.g711"
+                            }
+                        ],
+                        "curSndGroup": "builtins",
+                        "curSndName": "default",
+                        "customs": [
+                        ]
+                    },
+                    "soundMonitorConfig": {
+                        "enable": 0,
+                        "policies": [
+                            {
+                                "enable": 0,
+                                "endTime": "235959",
+                                "no": 1,
+                                "respondMode": 1,
+                                "startTime": "000000",
+                                "weekDays": [
+                                    1,
+                                    2,
+                                    3,
+                                    4,
+                                    5,
+                                    6,
+                                    7
+                                ]
+                            },
+                            {
+                                "enable": 0,
+                                "endTime": "",
+                                "no": 2,
+                                "respondMode": 1,
+                                "startTime": "",
+                                "weekDays": [
+                                ]
+                            },
+                            {
+                                "enable": 0,
+                                "endTime": "",
+                                "no": 3,
+                                "respondMode": 1,
+                                "startTime": "",
+                                "weekDays": [
+                                ]
+                            }
+                        ],
+                        "respondMode": 0,
+                        "susceptiveness": 3
+                    },
+                    "streamConfig": {
+                        "streams": [
+                            {
+                                "bitRate": "688128",
+                                "frameRate": "15",
+                                "localUrl": "rtsp://192.168.0.187:554/live/ch0",
+                                "no": "1",
+                                "quality": "6",
+                                "resHeight": "1296",
+                                "resWidth": "2304",
+                                "wanUrl": ""
+                            },
+                            {
+                                "bitRate": "196608",
+                                "frameRate": "15",
+                                "localUrl": "rtsp://192.168.0.187:554/live/ch1",
+                                "no": "2",
+                                "quality": "1",
+                                "resHeight": "360",
+                                "resWidth": "640",
+                                "wanUrl": ""
+                            }
+                        ]
+                    },
+                    "tfcardConfig": {
+                        "capacityBytes": "0",
+                        "freespaceBytes": "0",
+                        "fwReversion": "",
+                        "hwReversion": "",
+                        "label": "",
+                        "manufactureDate": "",
+                        "manufacturerId": "",
+                        "oemId": "",
+                        "serialNo": "",
+                        "status": "1"
+                    },
+                    "timeConfig": {
+                        "autoAdjust": "0",
+                        "dst": "0",
+                        "tzDistrict": "",
+                        "tzGmt": "GMT+05:00",
+                        "tzName": "America/New_York",
+                        "tzString": "EST5EDT,M3.2.0,M11.1.0",
+                        "tzUtc": "UTC(-05:00)",
+                        "tzValue": "-240"
+                    },
+                    "trackConfig": {
+                        "toggle": "off"
+                    },
+                    "userSetting": {
+                    },
+                    "viewAnglesConfig": {
+                        "viewAngles": [
+                            {
+                                "name": "",
+                                "panSteps": -1,
+                                "tiltSteps": -1,
+                                "ts": 0,
+                                "url": "",
+                                "viewAngle": 1
+                            },
+                            {
+                                "name": "",
+                                "panSteps": -1,
+                                "tiltSteps": -1,
+                                "ts": 0,
+                                "url": "",
+                                "viewAngle": 2
+                            },
+                            {
+                                "name": "",
+                                "panSteps": -1,
+                                "tiltSteps": -1,
+                                "ts": 0,
+                                "url": "",
+                                "viewAngle": 3
+                            },
+                            {
+                                "name": "",
+                                "panSteps": -1,
+                                "tiltSteps": -1,
+                                "ts": 0,
+                                "url": "",
+                                "viewAngle": 4
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    },
+    "status": "ok"
+}

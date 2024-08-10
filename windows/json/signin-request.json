@@ -1,0 +1,20 @@
+{
+    "data": {
+        "agentName": "windows",
+        "agentToken": "{abc12345-6789-0def-9abc-d3adb33f0123}",
+        "appVendorCode": "WVC",
+        "grantType": "password",
+        "nonce": "nonce",
+        "origin": "PC",
+        "osName": "windows",
+        "password": "saltedHashedPassword",
+        "scope": "all",
+        "username": "user@account.com"
+    },
+    "meta": {
+        "appName": "wansview",
+        "appVendorCode": "WVC",
+        "locale": "en",
+        "localtz": -240
+    }
+}

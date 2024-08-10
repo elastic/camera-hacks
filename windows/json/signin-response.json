@@ -1,0 +1,30 @@
+{
+    "code": 0,
+    "message": "",
+    "result": {
+        "accessExpiresIn": 7200,
+        "accessToken": "155characterAccessTokenString",
+        "alias": "user@account.com",
+        "ident": {
+            "allies": [
+            ],
+            "continent": "CNA",
+            "email": "user@account.com",
+            "nodeName": "us",
+            "region": "US",
+            "status": 1,
+            "uacNodeUrl": "https://uac-us.ajcloud.net/api"
+        },
+        "lastClient": "",
+        "lastLogining": 0,
+        "pushEnable": 1,
+        "refreshExpiresIn": 2592000,
+        "refreshToken": "refreshToken",
+        "regTime": 1710782484945,
+        "scope": "read write",
+        "signToken": "signToken",
+        "tokenType": "Bearer",
+        "uid": "us:abc12345-6789-0def-9abc-d3adb33f0123"
+    },
+    "status": "ok"
+}

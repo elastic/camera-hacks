@@ -1,0 +1,75 @@
+{
+    "code": 0,
+    "message": "",
+    "result": {
+        "conDevices": [
+            {
+                "aliasName": "WVCD0123456789AB",
+                "bindStatus": "binded",
+                "conStatus": 1,
+                "conTs": 1713222307748,
+                "conType": 0,
+                "deviceId": "WVCD0123456789AB",
+                "deviceType": 1,
+                "shares": 0
+            }
+        ],
+        "devCmpts": [
+        ],
+        "devGenerals": [
+            {
+                "accessPriKey": "43characterAccessPriKey",
+                "accessPubKey": "43characterAccessPubKey",
+                "activeTime": 1713222307747,
+                "bindNode": "us",
+                "context":  {
+                                "config": {
+                                    "appCloudStorUrl":"https://cloud-stor-us.ajcloud.net/api",
+                                    "appEmcUrl":"https://emc-us.ajcloud.net/api",
+                                    "appGatewayUrl":"https://cam-gw-us.ajcloud.net/api",
+                                    "appKeepAliveUrl":"",
+                                    "devCloudStorUrl":"https://cloud-stor-isc-us.ajcloud.net/api",
+                                    "devEmcUrl":"https://emc-isc-us.ajcloud.net/api",
+                                    "devGatewayUrl":"https://cam-gw-isc-us.ajcloud.net/api",
+                                    "devKeepAliveUrl":"",
+                                    "devSdcUrl":"https://sdc-isc.ajcloud.net/api",
+                                    "sdcName":"us",
+                                    "subDevConfigs":{},
+                                    "subDevTypes":[],
+                                    "region":"us01",
+                                    "zone":"US-z-e",
+                                    "country":"US",
+                                    "continent":"CNA",
+                                    "capabilityGroup":{},
+                                    "sim":0,
+                                    "iccid":""
+                                }
+                            },
+                "deviceId": "WVCD0123456789AB",
+                "deviceMode": "NAV",
+                "deviceType": 1,
+                "master": "",
+                "oriNode": "us",
+                "prodName": "Q6",
+                "slaves": [
+                ],
+                "vendorCode": "WVC"
+            }
+        ],
+        "devGroups": [
+            {
+                "dids": [
+                ],
+                "groupid": "groupid",
+                "name": "Group 1"
+            }
+        ],
+        "devPinners": [
+        ],
+        "invites": [
+        ],
+        "pairs": [
+        ]
+    },
+    "status": "ok"
+}

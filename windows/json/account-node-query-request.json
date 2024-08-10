@@ -1,0 +1,18 @@
+{
+    "data": {
+        "accountType": "email",
+        "agentName": "win95vm",
+        "appVendorCode": "WVC",
+        "crCode": "",
+        "ctCode": "",
+        "origin": "PC",
+        "osName": "windows",
+        "username": "d3adb33f@notarealsite.com"
+    },
+    "meta": {
+        "appName": "wansview",
+        "appVendorCode": "WVC",
+        "locale": "en",
+        "localtz": -240
+    }
+}

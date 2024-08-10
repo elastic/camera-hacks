@@ -1,0 +1,37 @@
+{
+    "code": 0,
+    "message": "",
+    "result": {
+        "devices": [
+            {
+                "_uts": "1713222305481",
+                "appKeepAliveUrl": "",
+                "appSdcUrl": "https://sdc.ajcloud.net/api",
+                "cloudStorUrl": "https://cloud-stor-us.ajcloud.net/api",
+                "continent": "CNA",
+                "country": "US",
+                "devCloudStorUrl": "https://cloud-stor-isc-us.ajcloud.net/api",
+                "devEmcUrl": "https://emc-isc-us.ajcloud.net/api",
+                "devGatewayUrl": "https://cam-gw-isc-us.ajcloud.net/api",
+                "deviceId": "WVCD0123456789AB",
+                "deviceType": 1,
+                "devKeepAliveUrl": "",
+                "devSdcUrl": "https://sdc-isc.ajcloud.net/api",
+                "emcUrl": "https://emc-us.ajcloud.net/api",
+                "gatewayUrl": "https://cam-gw-us.ajcloud.net/api",
+                "keepAliveUrl": "",
+                "p2ps": "use01",
+                "region": "us01",
+                "sdcName": "us",
+                "stunServers": "132.145.136.179,47.90.139.18,167.172.230.224",
+                "subDevConfigs": {
+                },
+                "subDevTypes": [
+                ],
+                "tunnelUrl": "wss://cam-tunnel-isc-us.ajcloud.net/tunnel",
+                "zone": "US-z-e"
+            }
+        ]
+    },
+    "status": "ok"
+}

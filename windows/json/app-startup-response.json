@@ -1,0 +1,309 @@
+{
+    "code": 0,
+    "message": "",
+    "result": {
+        "appActivity": [
+        ],
+        "appConfig": {
+            "adsShowBanner": "0",
+            "adsShows": {
+            },
+            "adsShowStartup": "0",
+            "agreementUrl": "https://adhoc.ajcloud.net/docs/wvc/en/agreement.html?_=2012463",
+            "appLogUrl": "",
+            "camEmcPortalUrl": "",
+            "camStorPortalUrl": "",
+            "capUrl": "https://sdc.ajcloud.net/api",
+            "cloudStorAgreementUrl": "https://adhoc.ajcloud.net/docs/wvc/en/cloudstor-agreement.html?_=19.002",
+            "contactUsUrl": "https://adhoc.ajcloud.net/contactus/wvc/index.html#/",
+            "country": "US",
+            "curAppVersionValue": "0",
+            "discoveryUrls": {
+            },
+            "emcPortalUrl": "https://emc-portal.ajcloud.net/api",
+            "faqUrl": "https://faq.ajcloud.net/",
+            "faqv2Url": "https://faq.ajcloud.net/v2/index.html#/wvc/en?_=2012463",
+            "lanDiscoVendorCodes": "WVC,GLY,CND,AQE",
+            "locale": "en",
+            "mktCountryCodes": "US,GB,DE,FR,IT,ES,JP,CN",
+            "privacyUrl": "https://adhoc.ajcloud.net/docs/wvc/en/privacy.html?_=2012463",
+            "storePortalUrl": "https://cloud-stor-portal.ajcloud.net/api",
+            "storePortalWebUrl": "https://cloud-stor-portal-web.ajcloud.net/v20210926",
+            "uacUrl": "https://uac.ajcloud.net/api",
+            "voiceAssistantsHelpUrl": "https://adhoc.ajcloud.net/voice-assistants/wvc/index.html?_=2012463",
+            "wanIp": "1.2.3.4"
+        },
+        "appVersion": {
+            "appName": "wansviewplus",
+            "apps": [
+                {
+                    "mustUpgradeBeforeDays": 90,
+                    "mustUpgradeVersions": [
+                        "1.0.19080902",
+                        "1.0.19081402",
+                        "1.0.19090102",
+                        "1.0.19091706"
+                    ],
+                    "os": "ios",
+                    "osVers": [
+                        "9",
+                        "10",
+                        "11",
+                        "12",
+                        "13",
+                        "14"
+                    ],
+                    "priority": 0,
+                    "releaseDate": "20230428",
+                    "url": "itms-apps://itunes.apple.com/app/id1397726277",
+                    "urlType": "appstore",
+                    "versionName": "2.0.23042802",
+                    "versionValue": "2023042802"
+                },
+                {
+                    "appWebSites": [
+                        {
+                            "url": "https://play.google.com/store/apps/details?id=net.ajcloud.wansviewplus",
+                            "urlType": "googleplay"
+                        },
+                        {
+                            "url": "",
+                            "urlType": "google"
+                        }
+                    ],
+                    "mustUpgradeBeforeDays": 90,
+                    "mustUpgradeVersions": [
+                        "1.0.19090108",
+                        "1.0.19090106",
+                        "1.0.19090104",
+                        "1.0.19090102"
+                    ],
+                    "os": "android",
+                    "osVers": [
+                        "19",
+                        "20",
+                        "21",
+                        "22",
+                        "23",
+                        "24",
+                        "25",
+                        "26",
+                        "27",
+                        "28",
+                        "29"
+                    ],
+                    "priority": 0,
+                    "releaseDate": "20230428",
+                    "url": "market://details?id=net.ajcloud.wansviewplus",
+                    "urlType": "googleplay",
+                    "versionName": "2.0.23042802",
+                    "versionValue": "2023042802"
+                }
+            ],
+            "appVendorCode": "WVC"
+        },
+        "curValidTsRange": [
+            1713228244644,
+            1713243064644
+        ],
+        "modeCapabilities": [
+            {
+                "capability": {
+                    "diagnose": "0",
+                    "networkConfig": "qr",
+                    "onvif": "1",
+                    "ptz": "0"
+                },
+                "deviceMode": "K3C"
+            },
+            {
+                "capability": {
+                    "diagnose": "0",
+                    "networkConfig": "eth,qr",
+                    "onvif": "1",
+                    "ptz": "1"
+                },
+                "deviceMode": "Q3S"
+            },
+            {
+                "capability": {
+                    "diagnose": "0",
+                    "networkConfig": "qr",
+                    "onvif": "0",
+                    "ptz": "1"
+                },
+                "deviceMode": "Q5C"
+            },
+            {
+                "capability": {
+                    "diagnose": "0",
+                    "networkConfig": "eth,qr",
+                    "onvif": "1",
+                    "ptz": "1"
+                },
+                "deviceMode": "Q5S"
+            },
+            {
+                "capability": {
+                    "diagnose": "0",
+                    "networkConfig": "eth,qr",
+                    "onvif": "1",
+                    "ptz": "0"
+                },
+                "deviceMode": "W3C"
+            },
+            {
+                "capability": {
+                    "diagnose": "0",
+                    "networkConfig": "eth,qr",
+                    "onvif": "0",
+                    "ptz": "0"
+                },
+                "deviceMode": "W3S"
+            },
+            {
+                "capability": {
+                    "diagnose": "0",
+                    "networkConfig": "eth,qr",
+                    "onvif": "1",
+                    "ptz": "0"
+                },
+                "deviceMode": "W5C"
+            },
+            {
+                "capability": {
+                    "diagnose": "0",
+                    "networkConfig": "eth,qr",
+                    "onvif": "1",
+                    "ptz": "0"
+                },
+                "deviceMode": "W5S"
+            },
+            {
+                "capability": {
+                    "diagnose": "0",
+                    "networkConfig": "qr",
+                    "onvif": "1",
+                    "ptz": "1"
+                },
+                "deviceMode": "Y3C"
+            },
+            {
+                "capability": {
+                    "diagnose": "0",
+                    "networkConfig": "eth,qr",
+                    "onvif": "1",
+                    "ptz": "1"
+                },
+                "deviceMode": "Y5C"
+            },
+            {
+                "capability": {
+                    "diagnose": "0",
+                    "networkConfig": "eth,qr",
+                    "onvif": "1",
+                    "ptz": "1"
+                },
+                "deviceMode": "Y5S"
+            },
+            {
+                "capability": {
+                    "diagnose": "0",
+                    "networkConfig": "eth,qr",
+                    "onvif": "1",
+                    "ptz": "1"
+                },
+                "deviceMode": "W5M"
+            },
+            {
+                "capability": {
+                    "diagnose": "0",
+                    "networkConfig": "qr",
+                    "onvif": "0",
+                    "ptz": "0"
+                },
+                "deviceMode": "G3C"
+            },
+            {
+                "capability": {
+                    "diagnose": "0",
+                    "networkConfig": "qr",
+                    "onvif": "0",
+                    "ptz": "0"
+                },
+                "deviceMode": "B3C"
+            }
+        ],
+        "multiSdc": [
+            {
+                "appUrl": "https://sdc-us.ajcloud.net/api",
+                "defaultOpt": true,
+                "devUrl": "https://sdc-isc-us.ajcloud.net/api",
+                "name": "us",
+                "portalMgrUrl": "https://sdc-portal-mgr-us.ajcloud.net/api",
+                "regionOpts": [
+                    "CNA",
+                    "CSA",
+                    "CO1"
+                ],
+                "serverOpt": true
+            },
+            {
+                "appUrl": "https://sdc-ap.ajcloud.net/api",
+                "defaultOpt": false,
+                "devUrl": "https://sdc-isc-ap.ajcloud.net/api",
+                "name": "ap",
+                "portalMgrUrl": "https://sdc-portal-mgr-ap.ajcloud.net/api",
+                "regionOpts": [
+                    "COC",
+                    "CAS"
+                ],
+                "serverOpt": false
+            },
+            {
+                "appUrl": "https://sdc-eu.ajcloud.net/api",
+                "defaultOpt": false,
+                "devUrl": "https://sdc-isc-eu.ajcloud.net/api",
+                "name": "eu",
+                "portalMgrUrl": "https://sdc-portal-mgr-eu.ajcloud.net/api",
+                "regionOpts": [
+                    "CEU",
+                    "CAF",
+                    "AF",
+                    "TR",
+                    "IR",
+                    "IQ",
+                    "SY",
+                    "JO",
+                    "IL",
+                    "SA",
+                    "BH",
+                    "QA",
+                    "YE",
+                    "OM",
+                    "AE",
+                    "KW",
+                    "LB",
+                    "AZ",
+                    "GE",
+                    "CY",
+                    "PS",
+                    "AM"
+                ],
+                "serverOpt": false
+            },
+            {
+                "appUrl": "https://sdc-cm.ajcloud.net/api",
+                "defaultOpt": false,
+                "devUrl": "https://sdc-isc-cm.ajcloud.net/api",
+                "name": "cm",
+                "portalMgrUrl": "https://sdc-portal-mgr-cm.ajcloud.net/api",
+                "regionOpts": [
+                    "CN"
+                ],
+                "serverOpt": false
+            }
+        ]
+    },
+    "status": "ok"
+}

@@ -24,3 +24,4 @@ https://unix.stackexchange.com/questions/406320/access-the-filesystem-as-the-roo
 https://www.kernel.org/doc/Documentation/watchdog/watchdog-api.txt
 https://github.com/stayliv3/gdb-static-cross
 https://github.com/Dafang-Hacks/mips-gcc472-glibc216-64bit
+https://elinux.org/images/0/01/Debugging-with-gdb-csimmonds-elce-2020.pdf

